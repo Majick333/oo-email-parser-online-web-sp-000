@@ -5,18 +5,17 @@
 
 class EmailAddressParser
 attr_accessor :emails
-@@all = []
+#@@all = []
 
 def initialize(email_addresses)
   @emails = emails
-  @@all << self
+  #@@all << self
 end
 
 def parse
-  emails.split(' ').collect do |address|
-    address.split(',')
-  end
-    .flatten.uniq
+  @emails = @emails.gsub(/[\s,]/ ," ").split
+  		# @email is an array now
+  		@emails.uniq
   end
 
 
