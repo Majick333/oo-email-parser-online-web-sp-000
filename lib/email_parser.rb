@@ -11,9 +11,8 @@ def initialize(email_addresses)
   @emails = emails
 end
 
-def parse
-  emails.collect do |address|
-    address.split(" ")
+def parse(emails)
+  emails.split(" ") || email.split(", ")
   end
 end
 
