@@ -13,8 +13,11 @@ def initialize(email_addresses)
 end
 
 def parse
-  @@all.split(" ") #|| @@all.split(", ")
+  emails.split.collect do |address|
+    address.split(',')
   end
-#end
+    .flatten.uniq
+  end
+    
 
 end
