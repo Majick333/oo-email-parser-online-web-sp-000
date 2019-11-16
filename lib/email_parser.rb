@@ -14,7 +14,7 @@ end
 
 def parse
   @emails = @emails.gsub(/[\s,]/ ," ").split
-  		# @email is an array now
+  		
   		@emails.uniq
   end
 
