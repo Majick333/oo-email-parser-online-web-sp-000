@@ -12,4 +12,8 @@ def initialize(email_addresses)
   @@all << self
 end
 
+def parse
+  @@all.split(",", " ").uniq
+end
+
 end
