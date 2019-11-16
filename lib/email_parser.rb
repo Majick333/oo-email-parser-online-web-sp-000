@@ -15,6 +15,7 @@ end
 def parse
   email_addresses.collect do |address|
     address.split(" ")
+  end
 end
 
 end
