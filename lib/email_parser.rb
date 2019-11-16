@@ -9,11 +9,12 @@ attr_accessor :email_addresses
 
 def initialize(email_addresses)
   @email_addresses = email_addresses
-  @@all << self
+
 end
 
 def parse
-
+  email_addresses.collect do |address|
+    address.split(" ")
 end
 
 end
