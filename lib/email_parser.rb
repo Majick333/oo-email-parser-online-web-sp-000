@@ -13,7 +13,7 @@ def initialize(email_addresses)
 end
 
 def parse
-  email_addresses.collect do |address|
+  email_addresses.split.collect do |address|
     address.split(" ")
   end
 end
