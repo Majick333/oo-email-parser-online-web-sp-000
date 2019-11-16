@@ -13,7 +13,7 @@ def initialize(email_addresses)
 end
 
 def parse
-  @@all.split(" ") || @@all.split(", ")
+  @@all.split(" ") #|| @@all.split(", ")
   end
 #end
 
